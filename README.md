@@ -5,6 +5,18 @@
 
 So.
 
+### Install `goose`
+
+```bash
+yay -S goose-desktop
+```
+
+or
+
+```bash
+yay -S codename-goose # cli-only version, `-bin' exists as well
+```
+
 ### Using firejail
 
 CLI version:
@@ -71,9 +83,6 @@ CLI:
 ```
 $ goose configure
 
-This will update your existing config file
-  if you prefer, you can edit it directly at /home/net/.config/goose/config.yaml
-
 ┌   goose-configure
 │
 ◇  What would you like to configure?
@@ -83,16 +92,17 @@ This will update your existing config file
 │  Goose Mode
 │
 ◇  Which Goose mode would you like to configure?
-│  Approve Mode
+│  Smart Approve Mode
 │
-└  Set to Approve Mode - all tools and modifications require approval
+└  Set to Smart Approve Mode - modifications require approval
+
 ```
 
 GUI:
 
-Bottom-right corner -> button with small circles -> "Manual"
+Bottom-right corner -> button with small circles -> "Smart"
 
-Each time press "Allow Once".
+Each time it asks press "Allow Once".
 
 ### config file
 
