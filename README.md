@@ -8,11 +8,20 @@ So.
 ### Using firejail
 
 ```bash
-firejail --noprofile --whitelist=$HOME/shit/goose --whitelist=$HOME/.config/goose --whitelist=$HOME/.local/share/goose --whitelist=$HOME/.config/Goose  --whitelist=$HOME/.local/share/uv --whitelist=$HOME/.cache/uv --whitelist=$HOME/.local/share/pnpm goose-desktop
+firejail --noprofile --whitelist=$HOME/shit/goose --whitelist=$HOME/.config/goose --whitelist=$HOME/.local/share/goose --whitelist=$HOME/.config/Goose  --whitelist=$HOME/.local/share/uv --whitelist=$HOME/.cache/uv --whitelist=$HOME/.local/share/pnpm proxychains goose
 ```
 
 ```bash
-firejail --noprofile --whitelist=$HOME/shit/goose  --whitelist=$HOME/.config/goose --whitelist=$HOME/.local/share/goose --whitelist=$HOME/.config/Goose  --whitelist=$HOME/.local/share/uv --whitelist=$HOME/.cache/uv --whitelist=$HOME/.local/share/pnpm goose-desktop
+export HTTP_PROXY=http://127.0.0.1:9099
+export http_proxy=http://127.0.0.1:9099
+export HTTPS_PROXY=http://127.0.0.1:9099
+export https_proxy=http://127.0.0.1:9099
+export SOCKS_PROXY=socks5://127.0.0.1:9099
+export socks_proxy=socks5://127.0.0.1:9099
+export NO_PROXY=localhost,127.0.0.1
+export no_proxy=localhost,127.0.0.1
+
+firejail --noprofile --whitelist=$HOME/shit/goose  --whitelist=$HOME/.config/goose --whitelist=$HOME/.local/share/goose --whitelist=$HOME/.config/Goose  --whitelist=$HOME/.local/share/uv --whitelist=$HOME/.cache/uv --whitelist=$HOME/.local/share/pnpm goose-desktop --proxy-server="socks5://127.0.0.1:9099"
 ```
 
 ### Add `.goosehints`
@@ -50,3 +59,14 @@ GUI:
 Bottom-right corner -> button with small circles -> "Manual"
 
 Each time press "Allow Once".
+
+### config file
+
+```
+GOOSE_PROVIDER: openai
+OPENAI_HOST: https://text.pollinations.ai
+OPENAI_BASE_PATH:
+OPENAI_CUSTOM_HEADERS: private=true
+GOOSE_MODE: approve
+GOOSE_MODEL: openai-large
+```
