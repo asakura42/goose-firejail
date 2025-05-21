@@ -1,6 +1,6 @@
 # goose-firejail
 
-0. Don't ever ever ever sent to remote AI any personal data.
+0. Don't ever ever ever send to remote AI any personal data.
 1. Don't ever ever run any MCP's unprotected (it may `rm -rf` your `/home` theoretically).
 
 So.
