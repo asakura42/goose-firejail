@@ -18,7 +18,7 @@ firejail --noprofile --whitelist=$HOME/shit/goose  --whitelist=$HOME/.config/goo
 ### Add `.goosehints`
 
 ```bash
-echo 'Before attempting to run any command write a small Markdown explanation of it, like "Now I'll run `some_command`, this command will do such task" - USE MARKDOWN TO MARK CRUCIAL PARTS OF EXPLANATION.' >> ~/.config/goose/.goosehints
+echo 'Before attempting to run any command write a small Markdown explanation of it, like "Now I will run `some_command`, this command will do such task" - USE MARKDOWN TO MARK CRUCIAL PARTS OF EXPLANATION.' >> ~/.config/goose/.goosehints
 ```
 
 ### Manual Mode
